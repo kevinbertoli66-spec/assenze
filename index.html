@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a84ff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="ITS Assenze">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <title>ITS Assenze</title>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="app-icon">✓</div>
+      <div>
+        <h1>ITS Assenze</h1>
+        <p>Gestisci le tue ore di assenza</p>
+      </div>
+    </header>
+
+    <section class="card main-card">
+      <p class="label">ORE DI ASSENZA</p>
+
+      <div class="total">
+        <span id="hours">0</span>
+        <span class="max">/ 200 h</span>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <div class="progress-info">
+          <span id="percentage">0% utilizzato</span>
+          <span id="remaining">200 h rimaste</span>
+        </div>
+      </div>
+
+      <div class="counter-buttons">
+        <button id="minusBtn" class="circle-btn secondary" aria-label="Togli un'ora">−</button>
+        <button id="plusBtn" class="circle-btn primary" aria-label="Aggiungi un'ora">+</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Aggiungi rapidamente</h2>
+      <div class="quick-actions">
+        <button class="quick-btn" data-add="4">+4 h</button>
+        <button class="quick-btn" data-add="8">+8 h</button>
+      </div>
+    </section>
+
+    <section class="card remaining-card">
+      <div class="clock">◷</div>
+      <div>
+        <span>Ore disponibili</span>
+        <strong id="remainingBig">200 ore</strong>
+      </div>
+    </section>
+
+    <button id="resetBtn" class="reset-btn">↻ &nbsp; Azzera contatore</button>
+
+    <p id="installHint" class="install-hint">
+      Su iPhone puoi aggiungere questa app alla schermata Home da Safari:
+      <strong>Condividi → Aggiungi alla schermata Home</strong>.
+    </p>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
